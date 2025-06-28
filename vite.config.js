@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'; // <-- INI YANG KURANG!
+import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 
 export default defineConfig({
@@ -9,13 +9,10 @@ export default defineConfig({
         }),
     ],
     build: {
-        manifest: true,
         outDir: 'public/build',
+        manifest: true,
         rollupOptions: {
-            input: [
-                'resources/css/app.css',
-                'resources/js/app.js'
-            ]
-        }
-    }
+            input: ['resources/css/app.css', 'resources/js/app.js'],
+        },
+    },
 });
