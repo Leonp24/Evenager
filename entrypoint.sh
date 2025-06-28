@@ -8,6 +8,10 @@ npm run build
 # Rename manifest supaya Laravel bisa temukan
 mv public/build/.vite/manifest.json public/build/manifest.json
 
+php artisan migrate --force
+php artisan db:seed --force
+
+
 # Laravel perms
 chmod -R 775 storage bootstrap/cache
 
