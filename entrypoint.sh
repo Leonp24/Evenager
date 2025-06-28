@@ -1,6 +1,8 @@
 #!/bin/sh
-php artisan config:cache
-php artisan route:cache
-php artisan view:cache
+
+# Jalankan migrasi dan cache config (opsional)
 php artisan migrate --force
-php -S 0.0.0.0:8080 -t public
+php artisan config:cache
+
+# Jalankan server Laravel
+php artisan serve --host=0.0.0.0 --port=8080
