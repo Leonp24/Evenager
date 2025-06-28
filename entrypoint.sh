@@ -1,9 +1,15 @@
 #!/bin/sh
 
-# Install dependencies
-composer install --no-dev --optimize-autoloader
+# Install Laravel dependencies
+composer install --no-interaction --prefer-dist --optimize-autoloader
 npm install
 npm run build
+
+# Set permissions
+chmod -R 775 storage bootstrap/cache
+
+# Generate app key
+php artisan key:generate
 
 # Cache konfigurasi Laravel
 php artisan config:cache
