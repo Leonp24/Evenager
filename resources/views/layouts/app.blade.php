@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Evenager')</title>
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <!-- @vite(['resources/css/app.css', 'resources/js/app.js']) -->
+
+    <link rel="stylesheet" href="{{ asset('build/assets/app-DVByfu5x.css') }}">
+    <script src="{{ asset('build/assets/app-m4Na9FCi.js') }}" defer></script>
+
 
     @php
     $manifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
