@@ -6,6 +6,19 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\Admin\EventController as AdminEventController;
 use App\Http\Controllers\AdminAuthController;
+use Illuminate\Support\Facades\Hash;
+use App\Models\Admin;
+
+// sementara
+Route::get('/buat-admin', function () {
+    Admin::create([
+        'name' => 'Admin',
+        'email' => 'admin@example.com',
+        'password' => Hash::make('password123'),
+    ]);
+
+    return 'Admin berhasil dibuat!';
+});
 
 // ========================
 // ✨ User Routes
@@ -41,6 +54,3 @@ Route::prefix('admin')->middleware('auth:admin')->group(function () {
     ]);
 });
 Route::get('/admin/events/{id}/registrations', [AdminController::class, 'registrations'])->name('admin.events.registrations');
-
-
-
