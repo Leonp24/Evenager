@@ -12,9 +12,12 @@ chmod -R 775 storage bootstrap/cache
 php artisan key:generate
 
 # Cache konfigurasi Laravel
-php artisan config:cache
-php artisan route:cache
-php artisan view:cache
+php artisan config:clear
+php artisan view:clear
+php artisan route:clear
+php artisan cache:clear
+rm -rf bootstrap/cache/*.php
+
 
 # Jalankan migrasi (opsional)
 php artisan migrate --force
