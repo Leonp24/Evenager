@@ -12,6 +12,8 @@ use Carbon\Carbon;
     <div class="hero-content">
         <div class="row d-flex align-items-center">
             <div class="col-lg-6">
+                <a class="brand" href="{{ route('home') }}">
+                <img src="{{ asset('images/logo.png') }}" alt="" width="120px"></a>
                 <h1 class="hero-title mb-3">Selamat Datang di <span>Evenager</span></h1>
                 <p class="hero-subtitle text-muted">Di Evenager, kami hadir untuk membantumu mencari pengalaman event online yang tak hanya berkesan, tetapi juga penuh makna.</p>
                 <a href="#event" class="btn btn-outline-dark">Jelajahi Event</a>

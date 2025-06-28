@@ -20,12 +20,12 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg">
+    <!-- <nav class="navbar navbar-expand-lg">
         <div class="container d-flex justify-content-center">
             <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{ asset('images/logo.png') }}" alt=""></a>
         </div>
-    </nav>
+    </nav> -->
 
     <div class="container mt-4">
         @yield('content')
