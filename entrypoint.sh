@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# HAPUS build sebelumnya
+rm -rf public/build
+
 # Install Laravel dependencies
 composer install --no-interaction --prefer-dist --optimize-autoloader
 npm install
@@ -11,16 +14,13 @@ chmod -R 775 storage bootstrap/cache
 # Generate app key
 php artisan key:generate
 
-# Cache konfigurasi Laravel
-php artisan config:clear
-php artisan view:clear
-php artisan route:clear
-php artisan cache:clear
-rm -rf bootstrap/cache/*.php
+# Cache Laravel
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
 
-
-# Jalankan migrasi (opsional)
+# Jalankan migrasi
 php artisan migrate --force
 
-# Start server
+# Start Laravel server
 php artisan serve --host=0.0.0.0 --port=8080
