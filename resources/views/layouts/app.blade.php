@@ -6,18 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Evenager')</title>
 
+    <!-- @vite(['resources/css/app.css', 'resources/js/app.js']) -->
 
-    <link rel="stylesheet" href="{{ asset('build/assets/app-DVByfu5x.css') }}">
-    <script src="{{ asset('build/assets/app-m4Na9FCi.js') }}" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
-    @php
-    $manifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
-    @endphp
 
-    <link rel="stylesheet" href="{{ asset('build/' . $manifest['resources/css/app.css']['file']) }}">
-
-    <script type="module" src="{{ asset('build/' . $manifest['resources/js/app.js']['file']) }}"></script>
 
 </head>
 
@@ -36,6 +30,9 @@
 
     <!-- sweetalert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     @yield('scripts')
 </body>
 
