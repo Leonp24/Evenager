@@ -13,9 +13,16 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-m4Na9FCi.js",
+    "file": "assets/app-Cqh58bnp.js",
     "name": "app",
     "src": "resources/js/app.js",
-    "isEntry": true
+    "isEntry": true,
+    "css": [
+      "assets/app-DVByfu5x.css"
+    ],
+    "assets": [
+      "assets/bootstrap-icons-mSm7cUeB.woff2",
+      "assets/bootstrap-icons-BeopsB42.woff"
+    ]
   }
 }
