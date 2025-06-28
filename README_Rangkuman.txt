@@ -30,7 +30,7 @@ Tanggal: 28 Juni 2025
     cp .env.example .env  
     php artisan key:generate 
 
-(Namun bisa diskip karena yang saya jadikan zip full dengan beberapa dependencies tersebut)
+(Namun bisa diskip karena yang saya jadikan zip full dengan beberapa dependencies tersebut, kecuali pull/clone dari link github)
 
 4. Buat database baru di phpMyAdmin: `event_manager`
 5. Import file `database/database.sql`
