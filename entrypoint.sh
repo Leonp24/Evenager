@@ -17,9 +17,12 @@ chmod -R 775 storage bootstrap/cache
 
 # Laravel setup
 php artisan key:generate
-php artisan config:cache
+php artisan config:clear
+php artisan cache:clear
+php artisan view:clear
+php artisan route:clear
 php artisan route:cache
-php artisan view:cache
+php artisan config:cache
 php artisan migrate --force
 
 # Start server
